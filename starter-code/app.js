@@ -3,13 +3,13 @@
 // /* Problem 1 (this is your demo that we'll solve in class)
 // Write a function called sum() that takes in two numbers as arguments and then returns an array where the first element is the sum of those numbers, and the second element is a concatenated string that EXACTLY follows this example and uses the values that were input into the function:
 
-// "The sum of 4 and 7 is 11."
-function sum(a, b) {
-return [ a + b ,'The sum of ' + a + ' and ' + b + ' is ' + (a+b) + '.'];
-// Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSum() function below and check the console to see if the test passes.*/
-}
-// // Write your code here
-testSum(4,7); //eslint-disable-line
+// // "The sum of 4 and 7 is 11."
+// function sum(a, b) {
+// return [ a + b ,'The sum of ' + a + ' and ' + b + ' is ' + (a+b) + '.'];
+// // Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSum() function below and check the console to see if the test passes.*/
+// }
+// // // Write your code here
+// testSum(4,7); //eslint-disable-line
 
 // }
 
@@ -21,13 +21,15 @@ testSum(4,7); //eslint-disable-line
 // /////////////////////////////////////
 // /* Problem 2
 // Write a function called multiply() that takes in two numbers as arguments and returns an array where the first element is the product of those numbers, and the second element is a string that EXACTLY follows this example and uses the values that were input into the function:
+function multiply(a, b) {
+    return [ a * b ,'The product of ' + a + ' and ' + b + ' is ' + (a*b) + '.'];
 
-
+}
 
 // function [functionTwo, 'The product of 5 and 9 is 45']{
 // let functionTwo = a * b;
 // }
-// functionTwo();
+testMultiply();
 // // "The product of 5 and 9 is 45."
 
 // // Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiply() function and see if the test passes.*/
