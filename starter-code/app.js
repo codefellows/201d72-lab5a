@@ -95,11 +95,20 @@ let testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) { //eslint-disable-line
 
+    let sumFirstTwoNumbers = sum (testArray[0], testArray[1]);
+    let sumPrepForThree = sum (sumFirstTwoNumbers[0], testArray[2]);
+    let sumFinalThree = sumPrepForThree[0];
+    console.log(sumFinalThree);
+
+    let sumThreeWords = testArray[0] + ',' + testArray[1] + ',' + testArray[2] + ' was passed in as an array of numbers, and ' + sumFinalThree + ' is their sum.';
+
+    return [sumFinalThree, sumThreeWords];
+
 }
 
 // Here is the test for sumArray(); uncomment it to run it
 
-// testSumArray(testArray);
+testSumArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
