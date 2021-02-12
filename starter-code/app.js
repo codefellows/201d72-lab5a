@@ -27,8 +27,11 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiply(a, b) { //eslint-disable-line
-
+    let total=a*b;
+    return "The product of "+a+" and "+b+" is "+ total;
 }
+
+
 
 // Here is the test for multiply(); uncomment it to run it
 // testMultiply(5,9);
@@ -37,7 +40,11 @@ function multiply(a, b) { //eslint-disable-line
 
 /////////////////////////////////////
 /* Problem 3
-Write a function called sumAndMultiply() that takes in three numbers as separate arguments and returns an array where the first element is the sum of those three numbers, the second element is the product of those three numbers,  and the third and fourth elements are strings that EXACTLY follow this example and use the values that were input into the function:
+Write a function called sumAndMultiply() that takes in three numbers 
+as separate arguments and returns an array where the first element is
+ the sum of those three numbers, the second element is the product of those three numbers, 
+  and the third and fourth elements are strings that EXACTLY follow this example and use the
+   values that were input into the function:
 
 Third element: "4 and 7 and 5 sum to 16."
 Fourth element: "The product of 4 and 7 and 5 is 140."
@@ -48,7 +55,11 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
-
+    let addition=a+b+c;
+    let multiply=a*b*c;
+    let sumS=a+" and "+ b +" and " + c + " sum to "+ addition;
+    let multiS="The product of "+ a +" and "+ b +" and "+ c +" is "+ multiply; 
+    return [addition, multiply, sumS, multiS];
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
@@ -58,7 +69,10 @@ function sumAndMultiply(a, b, c) { //eslint-disable-line
 
 /////////////////////////////////////
 /* Problem 4
-Write a function called sumArray() that takes in an array of numbers as its single argument and then returns an array where the first element is the sum of the numbers in the array, and the second element is a string that EXACTLY follows this example and uses the values that were input into the function:
+Write a function called sumArray() that takes in an array 
+of numbers as its single argument and then returns an array where the 
+first element is the sum of the numbers in the array, and the second element 
+is a string that EXACTLY follows this example and uses the values that were input into the function:
 
 "2,3,4 was passed in as an array of numbers, and 9 is their sum."
 
@@ -70,8 +84,17 @@ Test this function by hand in the console to get it working, and when you think 
 let testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) { //eslint-disable-line
-
+       let result=0;
+       let numbers=sumArr.toString();
+       for(let i=0; i<sumArr.length; i++){
+            result=result+sumArr[i];
+       }
+       return numbers+" was passed in as an array of numbers, and " +result+ " is their sum.";
 }
+
+
+
+
 
 // Here is the test for sumArray(); uncomment it to run it
 
@@ -81,7 +104,8 @@ function sumArray(sumArr) { //eslint-disable-line
 
 /////////////////////////////////////
 /* Problem 5
-Write a function called multiplyArray() that takes an array of numbers as its argument and returns an array whose first element is the product of those numbers, and the second element is a string that EXACTLY follows this example and uses the values that were input into the function:
+Write a function called multiplyArray() that takes an array of numbers 
+as its argument and returns an array whose first element is the product of those numbers, and the second element is a string that EXACTLY follows this example and uses the values that were input into the function:
 
 "The numbers 2,3,4 have a product of 24."
 
@@ -91,8 +115,14 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyArray(multArr) { //eslint-disable-line
-
+       let result=1;
+       let numbers=multArr.toString();
+       for(let i=0; i<multArr.length; i++){
+            result=result*multArr[i];
+       }
+       return "The numbers "+ numbers +" have a product of "+ result;
 }
+
 
 // Here is the test for multiplyArray(); uncomment it to run it
 // testMultiplyArray(testArray);
@@ -105,7 +135,12 @@ function multiplyArray(multArr) { //eslint-disable-line
 
 /////////////////////////////////////
 /* STRETCH GOAL: Problem 6
-Write a function called multiplyAnyArray() that takes an array of numbers of any length as its argument and returns an array whose first element is the product of those numbers, and the second element is a string that EXACTLY follows this example and concatenates a message using the arguments that were passed into the function:
+Write a function called multiplyAnyArray()
+ that takes an array of numbers of any length as 
+ its argument and returns an array whose first element is the 
+ product of those numbers, and the second element is a string that 
+ EXACTLY follows this example and concatenates a message using the
+  arguments that were passed into the function:
 
 "The numbers 1,2,3,4,5 have a product of 120."
 
@@ -119,7 +154,12 @@ Test this function by hand in the console to get it working, and when you think 
 let testDynamicArray = [1,2,3,4,5]; //eslint-disable-line
 
 function multiplyAnyArray(dynamicArray) { //eslint-disable-line
-
+       let result=1;
+       let numbers=dynamicArray.toString();
+       for(let i=0; i<dynamicArray.length; i++){
+            result=result*dynamicArray[i];
+       }
+       return "The numbers "+ numbers +" have a product of "+ result;
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
